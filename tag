@@ -95,8 +95,11 @@ def _import_gen(f):
 if __name__ == '__main__':
     import argparse
 
-    parser = argparse.ArgumentParser(description='Neversearch',
-        version='0.02')
+    #parser = argparse.ArgumentParser(description='Neversearch',
+    #    version='0.02')
+    parser = argparse.ArgumentParser(description='Neversearch')
+    parser.add_argument('--version', action='version', version='0.02')
+
     parser.add_argument('file', help='', nargs='*')
     parser.add_argument('-a', '--add', help='Add a tag', action='append',
         default=[])
